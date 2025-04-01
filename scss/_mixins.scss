@@ -1,0 +1,109 @@
+@mixin header ($color:black){
+    font-family: 'FiraSan-header-font';
+    font-size: 4.1rem;
+    font-weight: bold;
+    color: $color;
+}
+@mixin header1 ($color:black){
+    font-family: 'FiraSan-header-font';
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color;
+}
+@mixin header2 ($color:black){
+    font-family: 'SorceCodePro-Medium';
+    font-size: 1.2rem;
+    color: $color;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+@mixin header3 ($color:black){
+    font-family: 'FiraSan-header-font';
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: $color;
+}
+
+@mixin para-font ($color:black){
+    font-family: 'serif';
+    font-size: 1.2rem;
+    color: $color;
+}
+@mixin para-font1 ($color:black){
+    font-family: 'FiraSan-header-font';
+    font-size: 1.4rem;
+    color: $color;
+}
+@mixin a-text{
+    font-family: 'FiraSan-header-font';
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: $green-a;
+}
+
+
+// MIXIN PRO SERVICE BOX
+/*<main class="box">
+        <header>Základní identita značky</header>
+        <h1>Věci, bez kterých to (většinou) nejde</h1>
+        <a href="">Naming</a>
+        <a href="">Logo a vizuální identita</a>
+        <a href="">Obchodní argumentace, brand messaging</a>
+    </main>
+    </div>*/
+
+@mixin service-box {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px $gray-border;
+    width: auto;
+    height: 260px;
+    padding: 30px 30px;
+    
+    h1{
+        @include header1
+    }
+
+    h2{
+        @include para-font1($gray-header);
+        margin-top: 5px;
+        margin-bottom: 30px
+    }
+
+    a{
+        margin: 5px 0;
+        @include a-text;
+        transition: 1s ease;
+    }
+    a:hover{
+        color: #000;
+
+    }
+}
+@mixin studie-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 330px;
+    padding: 30px 30px;
+    background-image: url('../assets/img/scio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    .studie__content{
+        max-width: 240px
+    }
+    
+    h1{
+        @include header1 (white)
+    }
+
+    p{
+        @include para-font($gray-para);
+        color: white;
+    }
+
+    
+}
+

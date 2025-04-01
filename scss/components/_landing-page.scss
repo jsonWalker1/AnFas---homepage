@@ -1,0 +1,26 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    h1 {
+        @include header($gray-header);
+        font-size: 1.7rem;
+        padding-bottom: 50px;
+    }
+    h2{
+        @include header
+    }
+    h2 span {
+        @include header($gray-header)
+    }
+}
+
+.landing-page__logo,
+.landing-page__text {
+    width: 1020px;
+    text-align: left; 
+}
+
